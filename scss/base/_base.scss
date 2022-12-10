@@ -1,0 +1,49 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, input, button, textarea {
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+input, textarea {
+    &[readonly] {
+        cursor: default;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}

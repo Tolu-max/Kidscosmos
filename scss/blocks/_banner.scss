@@ -1,0 +1,115 @@
+
+.banner {
+    padding: 60px 0 0;
+    background: url(../img/placeholder.jpg) no-repeat center right / cover;
+    position: relative;
+
+    .underlay {
+        background: linear-gradient(151.89deg, rgba(106, 17, 203, 0.83) 6.97%, rgba(37, 117, 252, 0.83) 84.71%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &_content {
+        max-width: 530px;
+        text-align: center;
+        margin: 0 auto;
+
+        &-title {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        &-btn {
+            margin-bottom: 60px;
+            width: 100%;
+        }
+    }
+
+    &_media {
+        display: none;
+
+        &-wrapper {
+            overflow: hidden;
+            border-radius: 100% 0 0 100% / 100% 19% 81% 0%;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .banner {
+        &_content {
+            &-btn {
+                width: unset;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .banner {
+        padding: 0;
+
+        .container {
+            padding: 0;
+            max-width: unset;
+            margin-left: 0;
+            margin-right: calc(50vw - 530px);
+            min-height: 370px;
+            max-height: 370px;
+            overflow: hidden;
+        }
+
+        &_content {
+            width: 50%;
+            padding-left: 12px;
+            margin: unset;
+            text-align: left;
+
+            &-btn {
+                margin-bottom: 0;
+            }
+        }
+
+        &_media {
+            height: 700px;
+            display: block;
+            width: 50vw;
+            border-radius: 100% 0 100% 0 / 83% 100% 0 17%;
+            overflow: hidden;
+            backface-visibility: hidden;
+            flex-grow: 1;
+
+            img {
+                height: 370px;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .banner {
+        .container {
+            margin-right: 0;
+            margin-left: calc(50vw - (1110px / 2));
+        }
+    }
+}

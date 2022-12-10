@@ -1,0 +1,58 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// features section
+
+.features {
+    padding-bottom: 80px;
+
+    &_list {
+        &-item {
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .features {
+        padding-bottom: 100px;
+
+        &_list {
+            margin: 0 -15px;
+
+            &-item {
+                padding: 0 15px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .features {
+        padding-bottom: 150px;
+
+        &_list {
+            margin: 0 -17.5px;
+
+            &-item {
+                padding: 0 17.5px;
+            }
+        }
+    }
+}

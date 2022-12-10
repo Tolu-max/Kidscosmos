@@ -1,0 +1,153 @@
+
+.skills {
+    text-align: center;
+    background: #fff;
+    padding: 80px 0;
+
+    &_header {
+        max-width: 720px;
+        margin: 0 auto 30px;
+
+        &-title {
+            margin-bottom: 15px;
+        }
+    }
+
+    &_list {
+        &-item {
+            padding: 30px;
+            background: #fff;
+            border: 1px solid #D5D5D5;
+            border-collapse: collapse;
+            height: 250px;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all .4s ease-in-out;
+
+            &:before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                background: $accent;
+                z-index: 1;
+                opacity: 0;
+                transition: opacity .4s ease-in-out;
+            }
+
+            &_title, &_text {
+                z-index: 2;
+            }
+
+            &_title {
+                position: relative;
+                color: $accent;
+            }
+
+            &_text {
+                position: absolute;
+                top: 100%;
+                transition: all .3s ease-in-out;
+                color: #fff;
+                margin-top: 10px;
+            }
+
+            &:hover {
+                box-shadow: 0 0 10px #979797;
+
+                .skills_list-item_title {
+                    color: #fff;
+                    .icon {
+                        display: none;
+                    }
+                }
+
+                .skills_list-item_text {
+                    position: relative;
+                    top: 0;
+                }
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            &:nth-of-type(even) {
+                border-bottom: none;
+                border-top: none;
+            }
+
+            &:last-of-type {
+                border-bottom: 1px solid #D5D5D5;
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .skills {
+        &_list {
+            &-item {
+                &:nth-of-type(odd) {
+                    border-bottom: none;
+                }
+
+                &:nth-of-type(even) {
+                    border-top: 1px solid #D5D5D5;
+                    border-left: none;
+                }
+
+                &:last-of-type, &:nth-of-type(7) {
+                    border-bottom: 1px solid #D5D5D5;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .skills {
+        padding: 100px 0;
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .skills {
+        padding: 80px 0 120px;
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .skills {
+        &_list {
+            border: 1px solid #D5D5D5;
+            border-bottom: none;
+
+            &-item {
+                border: none;
+                border-bottom: 1px solid #D5D5D5;
+                border-right: 1px solid #D5D5D5;
+
+                &:nth-of-type(4),
+                &:last-of-type {
+                    border-right: none;
+                }
+
+                &:nth-of-type(odd),
+                &:nth-of-type(even) {
+                    border-bottom: 1px solid #D5D5D5;
+                }
+
+                &:nth-of-type(even) {
+                    border-top: none;
+                }
+
+            }
+        }
+    }
+}

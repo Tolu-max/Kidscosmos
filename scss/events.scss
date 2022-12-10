@@ -1,0 +1,14 @@
+
+@import "base/base";
+@import "base/mixins";
+@import "base/keyframes";
+@import "base/variables";
+@import "global/global";
+
+//page components
+@import "blocks/common/header";
+@import "blocks/common/page-header";
+@import "blocks/infoblocks";
+@import "pages/events/main";
+@import "blocks/common/footer";
+@import "blocks/common/modal";

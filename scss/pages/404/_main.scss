@@ -1,0 +1,140 @@
+
+body {
+    min-height: 100vh;
+}
+
+.error {
+    &_message {
+        color: $accent;
+        text-align: center;
+    }
+
+    &_btn {
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    &_media {
+        position: relative;
+        margin-bottom: 50px;
+
+        lottie-player {
+            display: none;
+        }
+
+        &-code {
+            img {
+                height: 100%;
+            }
+
+            .four {
+                max-width: 197px;
+                max-height: 197px;
+                position: relative;
+
+                &--left {
+                    left: 30px;
+                }
+
+                &--right {
+                    right: 30px;
+                }
+            }
+
+            .zero {
+                max-width: 175px;
+                max-height: 175px;
+                position: relative;
+                margin-bottom: 40px;
+
+                &_search {
+                    max-width: 52px;
+                    max-height: 34px;
+                    position: absolute;
+                    top: 50%;
+                    left: 6%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 25px 0;
+
+    &_logo {
+        width: 23px;
+        height: 27px;
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .error {
+        &_media {
+            &-code {
+                .four {
+                    &--left {
+                        left: 60px;
+                    }
+
+                    &--right {
+                        right: 60px;
+                    }
+                }
+            }
+        }
+
+        &_message {
+            margin-top: -50px;
+        }
+
+        &_btn {
+            display: flex;
+            max-width: 230px;
+            margin: 40px auto 0;
+        }
+    }
+}
+
+
+@media screen and (min-width: 767.98px) {
+    .error {
+        &_media {
+            margin: -80px 0 50px;
+
+            lottie-player {
+                display: block;
+            }
+
+            &-code {
+                margin-top: -150px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .error {
+        &_message {
+            max-width: 640px;
+            margin: -50px auto 0;
+            line-height: 1.4;
+            span:first-of-type {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .error {
+        &_media {
+            &-code {
+                margin-top: -240px;
+            }
+        }
+    }
+}

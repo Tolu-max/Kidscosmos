@@ -1,0 +1,178 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// journal content
+
+.journal {
+
+    &_list {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 2px solid #EDEDED;
+
+        &-item {
+            margin-bottom: 50px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .media {
+                border-radius: 8px;
+                overflow: hidden;
+                margin-bottom: 20px;
+                height: 180px;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .main {
+                &_meta {
+                    margin-bottom: 5px;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 1;
+                    color: $accent;
+
+                    &-item {
+                        margin: 0 10px 10px 0;
+
+                        &:last-of-type {
+                            margin: 0;
+                            width: 100%;
+                        }
+
+                        .icon {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                &_title {
+                    display: block;
+                    margin: 10px 0;
+                }
+
+                &_text {
+                    margin-bottom: 20px;
+                }
+
+                &_btn {
+                    height: 33px;
+                    padding: 0 20px;
+                    background: linear-gradient(135.83deg, #6A11CB 11.16%, #2575FC 109.73%);
+                    border-radius: 10px;
+                    position: relative;
+                    overflow: hidden;
+                    backface-visibility: hidden;
+
+                    .text {
+                        color: #fff;
+                        position: relative;
+                        z-index: 2;
+                        font-size: 12px;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: linear-gradient(111.41deg, #2575FC 24.85%, #6A11CB 95.39%);
+                        transition: opacity .3s ease-in-out;
+                        opacity: 0;
+                        z-index: 1;
+                    }
+
+                    &:hover, &:focus {
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pagination {
+        margin-bottom: 80px;
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .journal {
+        &_list {
+            &-item {
+                .media {
+                    height: 220px;
+                }
+
+                .main {
+                    &_meta {
+                        &-item {
+                            margin: 0 10px 0 0;
+
+                            &:last-of-type {
+                                width: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .journal {
+        padding: 40px 0 0;
+
+        &_list {
+            &-item {
+                margin-bottom: 60px;
+
+                .media {
+                    height: 390px;
+                }
+
+                .main {
+                    &_text {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+        .pagination {
+            margin-bottom: 100px;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .panel {
+        display: none !important;
+    }
+    .sidebar {
+        display: block !important;
+        max-width: 345px;
+    }
+    .content {
+        width: calc(100% - 345px - 35px);
+    }
+}

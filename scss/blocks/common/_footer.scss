@@ -1,0 +1,301 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// footer component
+
+.footer {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    linear-gradient(127.36deg, #6A11CB 31.85%, #2575FC 108.53%);
+    padding: 60px 0 0;
+    position: relative;
+
+    &_block {
+        margin-bottom: 30px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .logo--footer {
+            margin-bottom: 15px;
+
+            .logo_picture {
+                width: 42px;
+                height: 47px;
+                margin-right: 5px;
+            }
+
+            .text {
+                font-size: 12px;
+                margin-bottom: 5px;
+                font-weight: 400;
+
+                .brand {
+                    display: block;
+                    font-family: $accentFont;
+                    color: $headerColor;
+                    font-size: 32px;
+                    line-height: 1.3;
+                    margin-bottom: -7px;
+                    font-weight: 600;
+                }
+
+                &_secondary {
+                    position: relative;
+                    left: 2px;
+                }
+            }
+
+        }
+
+        &-header {
+            margin-bottom: 15px;
+        }
+
+        &-nav {
+            &_item {
+                margin-bottom: 10px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &-list {
+            &_item {
+                max-width: 230px;
+                margin-bottom: 15px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                .marker {
+                    background: #000;
+                    border-radius: 50%;
+                    width: 8px;
+                    height: 8px;
+                    margin-right: 10px;
+                }
+
+                .link {
+                    width: calc(100% - 18px);
+                }
+            }
+        }
+
+        &-socials {
+            font-size: 20px;
+            margin: 20px 0 5px;
+            color: $black;
+
+            &_item {
+                margin-right: 20px;
+                transition: .3s ease-in-out;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+
+                &:hover, &:focus {
+                    transform: scale(1.1);
+                    text-shadow: none;
+                }
+            }
+        }
+
+        &-instagram {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+
+            &_item {
+                border-radius: 12px;
+                overflow: hidden;
+                backface-visibility: hidden;
+
+                img {
+                    transition: all .5s ease;
+                }
+
+                &:hover, &:focus {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .link {
+            font-weight: 600;
+            &:hover, &:focus {
+                color: $accent;
+                text-shadow: 0.5px 0 $accent;
+            }
+
+            &--contacts {
+                line-height: 1;
+
+                &:first-of-type {
+                    margin-bottom: 15px;
+                }
+
+                .icon {
+                    transition: .3s ease-in-out;
+                    margin-right: 10px;
+                }
+
+                &:hover, &:focus {
+                    text-shadow: none;
+
+                    .icon {
+                        color: $accent;
+                    }
+                }
+            }
+        }
+    }
+
+    &_secondary {
+        color: #000;
+        padding: 30px 0 60px;
+
+        &-scroll {
+            font-size: 32px;
+            line-height: 1;
+        }
+
+        &-copyright {
+            font-size: 12px;
+            line-height: 1;
+            margin-top: 10px;
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .footer {
+        &_wrapper {
+            margin: 0 -15px;
+        }
+
+        &_block {
+            padding: 0 15px;
+
+            &-list {
+                &_item {
+                    &:after {
+                        top: 6px;
+                    }
+                }
+            }
+        }
+
+        &_secondary {
+
+            &-copyright {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .footer {
+        padding: 80px 0 0;
+
+        &_wrapper {
+            margin: 0 -20px;
+        }
+
+        &_block {
+            margin-bottom: 40px;
+            padding: 0 20px;
+
+            &-instagram {
+                grid-gap: 15px;
+            }
+
+            &[data-order="2"] {
+                .footer_block-header {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &[data-order="3"] {
+                .footer_block-header {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &[data-order="4"] {
+                .footer_block-header {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+
+        &_secondary {
+            padding-bottom: 80px;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .footer {
+        padding: 120px 0 0;
+
+        &_wrapper {
+            margin: 0;
+        }
+
+        &_block {
+            margin-bottom: 0;
+            padding: 0;
+
+            &[data-order="1"] {
+                .logo--footer {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &[data-order="2"] {
+                .footer_block-header {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &[data-order="1"],
+            &[data-order="4"] {
+                max-width: 230px;
+            }
+
+            &[data-order="4"] {
+                flex-grow: 1;
+            }
+
+            .link {
+                &--contacts {
+                    &:first-of-type {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        &_secondary {
+            padding-bottom: 100px;
+        }
+    }
+}

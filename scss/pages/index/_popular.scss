@@ -1,0 +1,149 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// popular courses section
+
+.popular {
+    padding-bottom: 80px;
+
+    &_header {
+        text-align: center;
+        margin-bottom: 10px;
+
+        &-title {
+            margin-bottom: 15px;
+        }
+
+        &-text {
+            max-width: 725px;
+            margin: 0 auto;
+        }
+    }
+
+    &_tags {
+        margin-bottom: 30px;
+    }
+
+    &_list {
+        &-card {
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .course-card_wrapper {
+                transition: .3s ease-in-out;
+
+                .top {
+                    padding-right: 30px;
+                }
+
+                .bottom {
+                    &_list {
+                        margin-bottom: 20px;
+
+                        &-item {
+                            margin-bottom: 5px;
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+
+                            &_marker {
+                                font-size: 6px;
+                                margin: 6px 6px 0 0;
+                                color: $textColor;
+                            }
+
+                            &_text {
+                                width: calc(100% - 12px);
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 2px 14px rgba(137, 139, 255, 0.5);
+                }
+            }
+        }
+    }
+
+    &_btn {
+        margin: 50px auto 0;
+        width: 100%;
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .popular {
+        &_btn {
+            width: fit-content;
+            padding: 0 68px;
+            display: flex;
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .popular {
+        padding-bottom: 100px;
+
+        &_tags {
+            margin-bottom: 40px;
+        }
+
+        &_list {
+            margin: 0 -15px;
+
+            &-card {
+                padding: 0 15px;
+                margin-bottom: 0;
+
+                &:last-of-type {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .popular {
+        padding-bottom: 120px;
+
+        &_header {
+            margin-bottom: 25px;
+        }
+
+        &_list {
+            &-card {
+                &:last-of-type {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .popular {
+        &_list {
+            &-card {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

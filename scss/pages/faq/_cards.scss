@@ -1,0 +1,107 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// cards section
+
+.cards {
+    &_list {
+        &-item {
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .card {
+                &_media {
+                    background: none;
+                    width: unset;
+                    height: unset;
+                    border-radius: unset;
+                    overflow: visible;
+
+                    .icon {
+                        color: $accent;
+                        font-size: 44px;
+                        line-height: 1;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &_main {
+
+                    &-title {
+                        color: $headerColor;
+                    }
+
+                    &-link {
+                        display: inline-block;
+                        margin-top: 20px;
+                    }
+                }
+
+                &:hover {
+                    .card_media {
+
+                        .icon {
+                            color: #fff;
+                        }
+                    }
+
+                    .card_main-title,
+                    .card_main-link {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .cards {
+        &_list {
+            margin: 0 -20px;
+
+            &-item {
+                width: 50%;
+                margin-bottom: 40px;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .cards {
+        padding: 40px 0 0;
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .cards {
+        &_list {
+            margin: 0 -17.5px;
+
+            &-item {
+                width: calc(100% / 3);
+                padding: 0 17.5px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+
+@import "base/mixins";
+@import "fonts/icomoon/style";
+
+@include font-face("icomoon", "icomoon", 400);
+@include font-face("Lato", "Lato-Regular", 400);
+@include font-face("Lato", "Lato-Italic", 400, italic);
+@include font-face("Lato", "Lato-Bold", 700);
+@include font-face("Lato", "Lato-Black", 900);
+@include font-face("Barlow Semi Condensed", "BarlowSemiCondensed-SemiBold", 600);
+@include font-face("Barlow Semi Condensed", "BarlowSemiCondensed-Bold", 700);
+@include font-face("Barlow Semi Condensed", "BarlowSemiCondensed-ExtraBold", 800);

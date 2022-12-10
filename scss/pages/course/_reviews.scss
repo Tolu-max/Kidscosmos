@@ -1,0 +1,36 @@
+
+.reviews {
+    background: linear-gradient(113.06deg, #6A11CB 29.53%, #2575FC 128.37%);
+    color: #fff;
+
+    &_header {
+        color: #fff;
+        max-width: 620px;
+        margin: 0 auto;
+    }
+
+    &_slider {
+        &:before {
+            opacity: 0.1;
+            color: #fff;
+        }
+
+        &-slide {
+            .name {
+                color: #fff;
+            }
+        }
+
+        &-controls {
+            color: #fff;
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 991.98px) {
+    .reviews {
+        padding: 100px 0 120px !important;
+    }
+}

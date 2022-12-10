@@ -1,0 +1,18 @@
+
+// base
+@import "base/base";
+@import "base/mixins";
+@import "base/keyframes";
+@import "base/variables";
+@import "global/global";
+
+//page components
+@import "blocks/common/header";
+@import "pages/index/hero";
+@import "pages/index/features";
+@import "pages/index/promo";
+@import "pages/index/about";
+@import "pages/index/popular";
+@import "blocks/banner";
+@import "blocks/common/footer";
+@import "blocks/common/modal";

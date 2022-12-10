@@ -1,0 +1,64 @@
+
+body {
+    background: #fff;
+}
+
+.page_main {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), linear-gradient(90deg, #6A11CB 0.05%, #6A11CB 16.85%, #2575FC 151.04%) !important;
+    background-blend-mode: lighten, normal !important;
+}
+
+.contacts {
+
+    &_form {
+        &-header {
+            margin-bottom: 30px;
+
+            &_title {
+                margin-bottom: 15px;
+                font-size: 44px;
+            }
+
+            &_text {
+                display: none;
+            }
+        }
+    }
+
+    &_map {
+        height: 580px;
+
+        #map {
+            height: 100%;
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .page_main {
+        padding-bottom: 120px;
+
+        &-text {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .page_main-text {
+        margin-bottom: 60px;
+    }
+
+    .contacts {
+        &_form {
+            padding: 100px 0 120px;
+            &-header {
+                &_title {
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+}

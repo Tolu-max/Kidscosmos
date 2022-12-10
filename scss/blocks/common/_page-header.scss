@@ -1,0 +1,252 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// page header component
+
+.page {
+    &_breadcrumbs {
+        padding: 20px 0 16px;
+        background: #fff;
+        font-size: 14px;
+        line-height: 1;
+        border-top: 1px solid #F6EDFF;
+
+        &-list {
+            .list-item {
+                position: relative;
+                margin-bottom: 4px;
+
+                &:not(:last-of-type) {
+                    margin-right: 3px;
+
+                    &:after {
+                        content: '/';
+                    }
+                }
+            }
+        }
+    }
+
+    &_main {
+        text-align: center;
+        background: linear-gradient(228.71deg, rgba(255, 255, 255, 0.0001) -62.66%, #FCF9F9 71.21%), linear-gradient(51.39deg, #6A11CB 20.14%, #2575FC 93.63%) center / cover,
+        url('../img/placeholder.jpg');
+        background-blend-mode: lighten, color, normal;
+        position: relative;
+        padding: 60px 0;
+        z-index: 1;
+
+        .underlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(168.23deg, rgba(251, 248, 254, 0.0001) -55.97%, #FBF8FE 83.31%, #FBF8FE 83.31%);
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+
+            .content-wrapper {
+                max-width: 630px;
+                margin: 0 auto;
+            }
+        }
+
+        &-header {
+            color: $accent;
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            margin-bottom: 25px;
+        }
+
+        &-form {
+            position: relative;
+
+            .icon {
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+                font-size: 16px;
+                line-height: 1;
+                color: #979797;
+            }
+
+            .field {
+                padding: 0 45px;
+
+                &::placeholder {
+                    font-weight: 700;
+                    color: #979797;
+                }
+            }
+        }
+
+        &-list {
+            &_item {
+                margin-bottom: 20px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                .wrapper {
+                    background: #fff;
+                    box-shadow: 0 2px 14px rgba(216, 217, 255, 0.65);
+                    border-radius: 12px;
+                    padding: 40px 30px;
+
+                    .content {
+                        text-align: left;
+
+                        .icon {
+                            font-size: 44px;
+                            line-height: 1;
+                            color: $accent;
+                            margin-right: 20px;
+                        }
+
+                        &_text {
+                            display: inline-block;
+                            max-width: 180px;
+                        }
+
+                        &_link:hover,
+                        &_link:focus {
+                            color: $accent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 374.98px) {
+    .page {
+        &_main {
+            &-list {
+                &_item {
+                    .wrapper {
+                        padding: 40px 30px 40px 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 575.98px) {
+    .page {
+        &_main {
+
+            &-list {
+                margin: 0 -10px 0;
+
+                &_item {
+                    padding: 0 10px;
+                    width: 50%;
+
+                    .wrapper {
+                        padding: 40px 20px;
+
+                        .content {
+                            .icon {
+                                margin-right: 30px;
+                            }
+                        }
+                    }
+
+                    &:last-of-type {
+                        width: 55%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .page {
+        &_main {
+            padding: 90px 0;
+
+            &-list {
+
+                &_item {
+                    .wrapper {
+                        padding: 40px;
+
+                        .content {
+                            .block {
+                                flex-grow: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .page {
+        &_main {
+            &-list {
+                margin: 0 -20px;
+
+                &_item {
+                    padding: 0 20px;
+                    width: calc(100% / 3);
+                    margin-bottom: 0;
+
+                    &:last-of-type {
+                        width: calc(100% / 3);
+                    }
+
+                    .wrapper {
+                        padding: 20px;
+
+                        .content_text, .content_link {
+                            line-height: 1.6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .page {
+        &_main {
+            &-list {
+                margin: 0 -30px;
+
+                &_item {
+                    padding: 0 30px;
+                    .wrapper {
+                        padding: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

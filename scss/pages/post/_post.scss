@@ -1,0 +1,239 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// post main content
+
+.post {
+    padding: 50px 0 90px;
+
+    &_content {
+        &-article {
+            padding-bottom: 58px;
+            border-bottom: 2px solid #EDEDED;
+
+            .text {
+                font-weight: 400;
+            }
+
+            &_header {
+                margin-bottom: 20px;
+
+                .title {
+                    margin-bottom: 20px;
+                }
+
+                .media {
+                    border-radius: 8px;
+                    backface-visibility: hidden;
+                    margin-bottom: 15px;
+                    overflow: hidden;
+                    height: 220px;
+
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .metadata {
+                    color: $accent;
+                    font-size: 14px;
+                    line-height: 1;
+                    font-weight: 700;
+
+                    &_item {
+                        margin: 0 10px 5px 0;
+
+                        &:last-of-type {
+                            margin: 0;
+                            width: 100%;
+                        }
+
+                        .icon {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+
+            &_subtitle {
+                margin-bottom: 15px;
+            }
+
+            &_block {
+                .text {
+                    color: $textColor;
+                }
+
+                .text:not(:last-of-type) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &_gallery {
+                margin: 30px 0;
+                grid-gap: 30px;
+                grid-template-columns: 1fr;
+
+                .media {
+                    height: 205px;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+
+            &_quote {
+                position: relative;
+                padding: 40px 0;
+
+                .icon {
+                    position: absolute;
+                    font-size: 160px;
+                    line-height: 1;
+                    color: #979797;
+                    z-index: -1;
+                    top: 30px;
+                    left: 0;
+                    opacity: 0.07;
+                }
+
+                .quote {
+                    padding-left: 30px;
+                }
+            }
+
+            &_share {
+                margin-top: 40px;
+
+                .link {
+                    border-radius: 8px;
+                    width: calc(50% - 5px);
+                    height: 40px;
+                    color: #fff;
+                    font-size: 16px;
+
+                    &--facebook {
+                        background: #4267B2;
+
+                        &:hover, &:focus {
+                            background: lighten(#4267B2, 5%);
+                        }
+                    }
+
+                    &--twitter {
+                        background: #00ACED;
+
+                        &:hover, &:focus {
+                            background: lighten(#00ACED, 6%);
+                        }
+                    }
+
+                    .icon {
+                        margin-right: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .post {
+        &_content {
+            &-article {
+                &_header {
+                    .media {
+                        height: 250px;
+                    }
+                }
+
+                .metadata {
+                    &_item {
+                        margin: 0 10px 0 0;
+
+                        &:last-of-type {
+                            width: unset;
+                        }
+                    }
+                }
+
+                &_gallery {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                &_share {
+                    .link {
+                        width: auto;
+                        padding: 0 30px;
+
+                        &--facebook {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .post {
+        &_content {
+            &-article {
+                &_subtitle {
+                    line-height: 1.3;
+                }
+
+                &_block {
+                    .text {
+                        line-height: 1.6;
+                    }
+                }
+
+                &_quote {
+                    .quote {
+                        line-height: 1.6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .post {
+        padding: 80px 0 90px;
+
+        &_panel {
+            display: none !important;
+        }
+
+        .sidebar {
+            display: block;
+            max-width: 345px;
+        }
+
+        &_content {
+            width: calc(100% - 345px - 35px);
+
+            &-article {
+                &_quote {
+                    padding: 60px 0;
+                }
+            }
+        }
+    }
+}

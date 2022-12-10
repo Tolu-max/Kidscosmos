@@ -1,0 +1,151 @@
+
+.subscribe {
+    position: relative;
+    padding: 80px 0;
+    background: linear-gradient(270deg, #6A11CB 5.11%, #2575FC 119.45%);
+    text-align: center;
+
+    &_circle, &_img {
+        display: none;
+    }
+
+    &_main {
+        color: #fff;
+        position: relative;
+        z-index: 10;
+
+        &-title {
+            color: #fff;
+        }
+
+        &-text {
+            margin: 15px 0 30px;
+        }
+
+        &-form {
+            .field {
+                margin-bottom: 10px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .subscribe {
+        &_main {
+            &-text {
+                margin: 10px 0 20px;
+                max-width: 575px;
+            }
+
+            &-form {
+                max-width: 575px;
+                width: 100%;
+                color: $textColor;
+
+                .field {
+                    margin-bottom: 0;
+                    width: calc(100% - 195px);
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+
+                .btn {
+                    width: 195px;
+                    padding: 0;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .subscribe {
+        padding: 100px 0;
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .subscribe {
+        padding: 120px 0;
+
+        &_main {
+            &-text {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .subscribe {
+        overflow: visible;
+
+        &_circle, &_img {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        &_img {
+            z-index: 3;
+
+            img {
+                width: 493px;
+                height: 377px;
+                position: absolute;
+                right: 20px;
+                top: 70px;
+            }
+        }
+
+        &_circle {
+            overflow: hidden;
+
+            &-circle {
+                width: 500px;
+                height: 500px;
+                border-radius: 50%;
+                background: linear-gradient(225.7deg, #6A11CB 36.56%, #2575FC 74.78%);
+                right: -77px;
+                top: 0;
+                position: absolute;
+            }
+        }
+
+        &_main {
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (min-width: 1599.98px) {
+    .subscribe {
+        &_img {
+            img {
+                right: 300px;
+                top: 70px;
+            }
+        }
+
+        &_circle {
+            &-circle {
+                width: 884px;
+                height: 846px;
+                right: -150px;
+                top: -350px;
+            }
+        }
+    }
+}

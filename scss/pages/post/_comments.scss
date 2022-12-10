@@ -1,0 +1,118 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// comments section
+
+.post {
+    &_content {
+        &-comments {
+            &_title {
+                margin-bottom: 20px;
+            }
+
+            &_list {
+                .comment {
+                    margin-bottom: 15px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    &[data-reply="true"] {
+                        margin-left: 30px;
+                    }
+
+                    &_media {
+                        border-radius: 50%;
+                        overflow: hidden;
+                        backface-visibility: hidden;
+                        width: 60px;
+                        height: 60px;
+                        margin-right: 15px;
+                    }
+
+                    &_main {
+                        width: calc(100% - 75px);
+
+                        &-panel {
+                            border-bottom: 2px solid #EDEDED;
+
+                            &_data {
+                                .name {
+                                    color: $accent;
+                                    margin-bottom: 5px;
+                                }
+
+                                .timestamp {
+                                    color: #868686;
+                                }
+                            }
+
+                            &_btn {
+                                border: 1px solid $accent;
+                                border-radius: 4px;
+                                height: 33px;
+                                text-transform: none;
+                                color: $accent;
+                                padding: 0 20px;
+                                margin: 5px 0 20px;
+                                &:hover, &:focus {
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+
+                        &-content {
+                            padding-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .post {
+        &_content {
+            &-comments {
+                &_list {
+                    .comment {
+                        margin-bottom: 40px;
+
+                        &[data-reply="true"] {
+                            margin-left: 70px;
+                        }
+
+                        &_media {
+                            margin-right: 20px;
+                        }
+
+                        &_main {
+                            width: calc(100% - 80px);
+
+                            &-panel {
+                                padding-bottom: 15px;
+
+                                &_btn {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

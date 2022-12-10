@@ -1,0 +1,301 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// modal styles
+
+.modal {
+    z-index: 1000000;
+
+    &.swal2-backdrop {
+        &-show {
+            background: rgba(43, 53, 67, 0.5);
+        }
+    }
+
+    .modal_popup-close {
+        position: absolute;
+        font-size: 20px;
+        top: 10px;
+        right: 10px;
+        color: $accent;
+    }
+
+    &_popup {
+        background: #fff;
+        border-radius: 12px;
+        position: relative;
+
+        &--team {
+            overflow: hidden;
+            padding: 30px;
+
+            .media {
+                border-radius: 12px;
+                overflow: hidden;
+                backface-visibility: hidden;
+                margin-bottom: 10px;
+                aspect-ratio: 1 / 1;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .main {
+
+                .icon {
+                    color: $accent;
+                }
+
+                &_name {
+                    line-height: 1.1;
+                    color: $accent;
+                    margin-bottom: 5px;
+                }
+
+                &_socials {
+                    margin: 10px 0;
+                    font-size: 20px;
+
+                    &-item {
+                        width: 21px;
+                        margin-right: 15px;
+                    }
+                }
+
+                &_bio {
+                    margin-bottom: 20px;
+                }
+
+                &_about {
+                    margin-bottom: 30px;
+
+                    &-item {
+                        margin-bottom: 10px;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                        .text {
+                            margin: 0 3px;
+                        }
+                    }
+                }
+
+                &_btn {
+                    text-transform: uppercase;
+                    color: $accent;
+                    font-size: 14px;
+                    line-height: 1;
+                    font-weight: 900;
+
+                    .icon {
+                        transition: margin-left .3s ease-in-out;
+                        margin-left: 10px;
+                        font-size: 14px;
+                    }
+
+                    &:hover, &:focus {
+                        .icon {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--register {
+            max-width: 1000px;
+            padding: 30px;
+            text-align: center;
+
+            .title {
+                margin-bottom: 15px;
+            }
+
+            .subtitle {
+                color: $accent;
+                margin: 10px 0;
+            }
+
+            .text {
+                font-weight: 400;
+            }
+
+            .registration_form {
+                margin-top: 20px;
+
+                .field:not(:last-of-type) {
+                    margin-bottom: 10px;
+                }
+
+                .wrapper {
+                    margin: 10px 0 20px;
+                    text-align: left;
+                    font-size: 14px;
+                    font-weight: 600;
+
+                    .link {
+                        color: $accent;
+                        margin-left: 25px;
+                    }
+
+                    .checkbox {
+                        input[type=checkbox]:checked + label {
+                            &:before, &:after {
+                                top: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// sweet alert 2 toast notification styles
+
+.alert {
+    &_popup {
+        background: #fff;
+        box-shadow: $shadow;
+        border-radius: 8px;
+        min-width: 280px;
+        max-width: 360px;
+        display: flex !important;
+        flex-direction: column;
+        padding: 30px;
+        position: relative;
+        z-index: 1000000;
+
+        &-close {
+            justify-content: flex-end;
+            transition: color .3s ease-in-out;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+
+            &:hover, &:focus {
+                color: $accent;
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .modal {
+
+        &_popup {
+
+            &--team {
+                padding: 40px;
+
+                .modal_popup-close {
+                    font-size: 24px;
+                    top: 15px;
+                    right: 15px;
+                }
+            }
+
+            &--register {
+                padding: 60px;
+
+                .modal_popup-close {
+                    top: 20px;
+                    right: 20px;
+                }
+
+                .registration_form {
+                    max-width: 605px;
+                    margin: 20px auto 0;
+
+                    .wrapper {
+                        margin: 10px 0 20px;
+                        text-align: center;
+
+                        .link {
+                            color: $accent;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .btn {
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .modal {
+
+        &_popup {
+
+            &--team {
+
+                .modal_popup-close {
+                    top: 20px;
+                    right: 20px;
+                }
+
+                .media {
+                    margin-right: 40px;
+                }
+            }
+
+            &--register {
+                .registration_form {
+                    .wrapper {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .link {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .modal {
+
+        &_popup {
+
+            &--team {
+                padding: 75px 70px;
+                max-width: 1000px;
+
+                .media {
+                    width: 356px;
+                    aspect-ratio: unset;
+                    margin-bottom: 0;
+                }
+
+                .main {
+                    width: calc(100% - 396px);
+                }
+            }
+        }
+    }
+}

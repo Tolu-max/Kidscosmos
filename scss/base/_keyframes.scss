@@ -1,0 +1,26 @@
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 400ms ease-in-out;
+}
+
+.fadeOut {
+    animation: fadeOut 400ms ease-in-out;
+}

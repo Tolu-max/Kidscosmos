@@ -1,0 +1,13 @@
+<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="dist/js/materialize.min.js"></script>
+    <script src="assets/libs/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="dist/js/app.js"></script>
+    <script src="dist/js/app.init.light-sidebar.js"></script>
+    <script src="dist/js/app-style-switcher.js"></script>
+    <script src="dist/js/custom.min.js"></script>
+    <script src="assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <script src="dist/js/pages/dashboards/dashboard1.js"></script>
+    <script src="assets/extra-libs/Datatables/datatables.min.js"></script>
+    <script src="dist/js/pages/datatable/datatable-basic.init.js"></script>

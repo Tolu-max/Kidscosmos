@@ -1,0 +1,152 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// contacts section
+
+.contacts_form {
+    padding-top: 0;
+
+    &-header {
+        &_title {
+            margin-bottom: 30px;
+        }
+
+        &_text {
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        &_list {
+            margin-bottom: 30px;
+
+            .list-item {
+                margin-bottom: 10px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+
+                    .content_link {
+                        display: inline-block;
+                        margin-bottom: 10px;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .icon, .helper {
+                    color: $accent;
+                    font-size: 16px;
+                    width: 16px;
+                    margin-right: 10px;
+                }
+
+                .icon {
+                    position: relative;
+                    top: 1.5px;
+                }
+            }
+        }
+    }
+
+    &-form {
+        margin-top: 30px;
+
+        .btn {
+            display: flex;
+            margin: 15px auto 0;
+            max-width: unset;
+        }
+
+        &_footer {
+            .wrapper {
+                align-items: flex-start !important;
+                flex-direction: column;
+
+                .link {
+                    margin-left: 28px;
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .contacts_form {
+        &-form {
+            .btn {
+                margin: 15px 0 0;
+                max-width: 262px;
+                width: 100%;
+            }
+
+            &_footer {
+                .wrapper {
+                    justify-content: flex-start !important;
+                    flex-direction: row;
+
+                    .link {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .contacts_form {
+        text-align: center;
+        padding-bottom: 100px;
+
+        &-header {
+            &_list {
+                max-width: 715px;
+                margin: 0 auto 20px;
+                .list-item {
+                    .content_text, .content_link {
+                        &:first-of-type {
+                            display: inline-block;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-form {
+            .btn {
+                margin: 15px auto 0;
+            }
+
+            &_footer {
+                .wrapper {
+                    justify-content: center !important;
+                    flex-direction: row;
+
+                    .link {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .contacts_form {
+        padding-bottom: 120px;
+    }
+}

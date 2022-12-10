@@ -1,0 +1,112 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// reply section
+
+.post {
+    &_content {
+        &-reply {
+            margin-bottom: 60px;
+
+            &_title {
+                margin-bottom: 40px;
+            }
+
+            &_form {
+                .field {
+                    margin-bottom: 10px;
+                }
+
+                textarea {
+                    height: 130px;
+                    margin-bottom: 20px !important;
+                }
+
+                .btn {
+                    display: block;
+                    width: 100%;
+                    margin: 30px auto 0;
+                    max-width: 356px;
+                }
+
+                input[type="checkbox"] + label {
+                    padding-left: 28px;
+                    color: #868686;
+
+                    &:after {
+                        color: $textColor;
+                    }
+
+                    &:before {
+                        border-color: #868686;
+                    }
+                }
+
+                .link {
+                    color: $accent;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+
+                    &:hover, &:focus {
+                        opacity: .7;
+                    }
+                }
+
+                label, .link {
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .post {
+        &_content {
+            &-reply {
+                &_form {
+                    .btn {
+                        margin: 30px 0 0;
+                    }
+
+                    .link {
+                        margin-left: 5px;
+                        width: unset;
+                        text-align: left;
+                    }
+
+                    .field-wrapper {
+                        .field {
+                            width: calc(50% - 5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .post {
+        &_content {
+            &-reply {
+                &_title {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+    }
+}

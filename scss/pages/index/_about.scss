@@ -1,0 +1,285 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// about section
+
+.about {
+    padding-bottom: 80px;
+
+    .container {
+        position: relative;
+    }
+
+    &_deco {
+        filter: drop-shadow(6px 6px 13px rgba(0, 0, 0, 0.218415));
+        transform: rotate(5deg);
+        display: none;
+    }
+
+    &_main {
+        background: linear-gradient(180deg, #6A11CB 1.26%, #2575FC 100%);
+        box-shadow: 0 2px 14px rgba(112, 115, 255, 0.4);
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 30px;
+
+        &-header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        &-list {
+            &_item {
+                text-align: center;
+                margin-bottom: 30px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                    .title {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .icon {
+                    color: $accentAlt;
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
+
+                .title {
+                    color: #fff;
+                    margin-bottom: 10px;
+                    line-height: 1.4;
+                }
+
+                .text {
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #eeefff;
+                }
+            }
+        }
+    }
+
+    &_review {
+        &-wrapper {
+            background: #fff;
+            box-shadow: 0 2px 14px rgba(216, 217, 255, 0.65);
+            border-radius: 12px;
+            text-align: center;
+            padding: 40px 30px;
+
+            .media {
+                width: 150px;
+                height: 150px;
+                margin: 0 auto 20px;
+
+                img {
+                    border-radius: 50%;
+                    overflow: hidden;
+                    backface-visibility: hidden;
+                }
+            }
+
+            .main {
+                &_name {
+                    margin-bottom: 10px;
+                }
+
+                &_review {
+                    font-size: 18px;
+                }
+            }
+
+            .rating {
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .about {
+        &_deco {
+            display: block;
+            position: absolute;
+            right: -64px;
+            top: -196px;
+            max-width: 420px;
+        }
+
+        &_main {
+            padding: 60px;
+
+            &-header {
+                text-align: left;
+            }
+
+            &-list {
+                &_item {
+                    text-align: left;
+                    margin-bottom: 15px;
+                    display: flex;
+
+                    .icon {
+                        font-size: 18px;
+                        margin: 6px 12px 0 0;
+                    }
+                }
+            }
+        }
+
+        &_review {
+            &-wrapper {
+                padding: 60px;
+
+                .media {
+                    width: 150px;
+                    height: 150px;
+                    margin: 0 auto 20px;
+
+                    img {
+                        border-radius: 50%;
+                        overflow: hidden;
+                        backface-visibility: hidden;
+                    }
+                }
+
+                .main {
+                    &_name {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .rating {
+                    justify-content: center;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .about {
+        padding-bottom: 100px;
+
+        &_main {
+            &-list {
+                &_item {
+                    .title {
+                        margin-bottom: 20px;
+                    }
+
+                    .text {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        &_review {
+            &-wrapper {
+                padding: 60px;
+
+                .media {
+                    width: 150px;
+                    height: 150px;
+                    margin: 0 auto 20px;
+
+                    img {
+                        border-radius: 50%;
+                        overflow: hidden;
+                        backface-visibility: hidden;
+                    }
+                }
+
+                .main {
+                    &_name {
+                        margin-bottom: 10px;
+                    }
+
+                    &_review {
+                        font-size: 20px;
+                    }
+                }
+
+                .rating {
+                    justify-content: center;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .about {
+        padding: 120px 0 190px;
+        position: relative;
+
+        &_deco {
+            top: -270px;
+            max-width: 580px;
+        }
+
+        &_main {
+            margin-bottom: 0;
+
+            &-header {
+                margin-bottom: 30px;
+            }
+
+            &-list {
+                &_item {
+                    margin-bottom: 30px;
+
+                    .title {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .content {
+                max-width: 470px;
+            }
+        }
+
+        &_review {
+            max-width: 375px;
+            position: absolute;
+            right: 52px;
+            top: 125px;
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .about {
+        padding: 200px 0 170px;
+
+        &_deco {
+            right: -126px;
+        }
+
+        &_review {
+            max-width: 475px;
+            position: absolute;
+            right: 52px;
+            top: 125px;
+        }
+    }
+}

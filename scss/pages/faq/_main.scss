@@ -1,0 +1,130 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// FAQ section
+
+.faq {
+    padding: 0 0 80px;
+    background: transparent;
+
+    .container {
+        max-width: 915px;
+    }
+
+    &_header {
+        text-align: center;
+        margin-bottom: 15px;
+
+        &-title {
+            margin-bottom: 10px;
+        }
+    }
+
+    &_accordion {
+        &-item {
+            &_body {
+                .media {
+                    margin-bottom: 25px;
+                    max-height: 325px;
+                    overflow: hidden;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .main {
+                    &_list {
+                        margin-top: 20px;
+
+                        &-item {
+                            padding-left: 25px;
+                            margin-bottom: 15px;
+                            position: relative;
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: 5px;
+                                left: 0;
+                                width: 7px;
+                                height: 7px;
+                                border-radius: 50%;
+                                border: 1px solid $textColor;
+                            }
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .faq {
+        &_accordion {
+            &-item {
+                .item-wrapper {
+                    padding: 20px 30px 20px;
+                }
+
+                &_body {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .faq {
+        padding: 100px 0;
+
+        &_header {
+            margin-bottom: 30px;
+
+            &-title {
+                margin-bottom: 15px;
+            }
+        }
+
+        &_accordion {
+            &-item {
+                &_header {
+                    .text {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .faq {
+        padding: 120px 0;
+
+        &_accordion {
+            &-item {
+                .item-wrapper {
+                    padding: 22px 30px;
+                }
+            }
+        }
+    }
+}

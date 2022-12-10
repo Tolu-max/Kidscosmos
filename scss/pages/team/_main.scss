@@ -1,0 +1,221 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// team main content
+
+.team {
+    text-align: center;
+    padding: 0 0 80px;
+
+    &_list {
+        &-item {
+            margin-bottom: 30px;
+            cursor: pointer;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .media {
+                border-radius: 12px;
+                overflow: hidden;
+                margin-bottom: 5px;
+                aspect-ratio: 1 / 1;
+                bottom: 0;
+                transition: all .3s ease-in-out;
+                position: relative;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .main {
+                .name {
+                    margin-bottom: 5px;
+                    transition: color .3s ease-in-out;
+                }
+            }
+
+            &:hover {
+                .media {
+                    bottom: 10px;
+                }
+
+                .main {
+                    .name {
+                        color: $accent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.counter {
+    padding: 60px 0;
+    background: url("../img/placeholder.jpg") no-repeat center center / cover;
+    position: relative;
+
+    .underlay {
+        background: linear-gradient(149.63deg, #6A11CB 5.49%, #2575FC 114.03%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        mix-blend-mode: color;
+    }
+
+    &_content {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+
+        &-item {
+            text-align: center;
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .number {
+                text-shadow: 0 2px 2px #0C0C7E;
+                font-size: 40px;
+                line-height: .9;
+                font-weight: 600;
+                font-family: $accentFont;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 16px;
+            }
+
+            .label {
+                color: #DAB9FF;
+                font-family: $bodyFont;
+                line-height: 1;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .team {
+        &_list {
+            margin: 0 -15px;
+
+            &-item {
+                padding: 0 15px;
+
+                &[data-order="11"] {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .team {
+        &_list {
+            margin: 0 -20px;
+
+            &-item {
+                padding: 0 20px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .counter {
+        padding: 80px 0;
+
+        &_content {
+            &-item {
+                margin-bottom: 0;
+
+                .number {
+                    font-size: 50px;
+                }
+
+                .label {
+                    font-size: 24px;
+                    line-height: 1.3;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .team {
+        padding: 40px 0 120px;
+
+        &_list {
+            &-item {
+                &[data-order="10"] {
+                    margin-bottom: 0;
+                }
+
+                .main {
+                    .name {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .counter {
+        padding: 120px 0;
+
+        &_content {
+            &-item {
+                .number {
+                    font-size: 60px;
+                    height: 60px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .team {
+        &_list {
+            &-item {
+                &[data-order="9"] {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .counter {
+
+        &_content {
+            &-item {
+                .number {
+                    font-size: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}

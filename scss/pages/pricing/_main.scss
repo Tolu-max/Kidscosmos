@@ -1,0 +1,275 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// pricing main content
+
+.pricing {
+    text-align: center;
+    padding-bottom: 80px;
+
+    &_header {
+        max-width: 725px;
+        margin: 0 auto 40px;
+
+        &-title {
+            margin-bottom: 15px;
+        }
+    }
+
+    &_nav {
+        background: #fff;
+        box-shadow: inset 0 3px 3px rgba(62, 62, 62, 0.075);
+        border-radius: 16.5px;
+        overflow: hidden;
+        backface-visibility: hidden;
+        max-width: 450px;
+        margin: 0 auto 30px;
+
+        .nav {
+
+            &-item {
+                width: calc(100% / 3);
+            }
+
+            &-link {
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 1;
+                font-weight: 700;
+                color: #979797;
+                padding: 10px 0;
+                border-radius: 16.5px;
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                backface-visibility: hidden;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 34px;
+                    background: $accent;
+                    transition: opacity .3s ease-in-out;
+                    opacity: 0;
+                    z-index: 1;
+                }
+
+                &_text {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &.active {
+                    color: #fff;
+
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &_list {
+        &-card {
+            margin: 0 auto 30px;
+            max-width: 350px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .card-wrapper {
+                background: #fff;
+                box-shadow: 0 2px 14px rgba(216, 217, 255, 0.65);
+                border-radius: 12px;
+                overflow: hidden;
+                padding-bottom: 45px;
+                transition: .3s ease-in-out;
+
+                .top {
+                    padding: 40px;
+                    text-align: left;
+                    background-blend-mode: multiply, normal;
+
+                    &_title, &_price, &_price-price {
+                        color: #fff;
+                    }
+
+                    &--basic {
+                        background: linear-gradient(132.77deg, #6A11CB 0.03%, #2575FC 90.3%), url("../img/placeholder.jpg") no-repeat center / cover;
+                    }
+
+                    &--advanced {
+                        background: linear-gradient(317.47deg, #F9D423 2.34%, #F83600 91.21%), url("../img/placeholder.jpg") no-repeat center / cover;
+                    }
+
+                    &--corporate {
+                        background: linear-gradient(304.33deg, #0ACFFE 15.03%, #495AFF 89.83%), url("../img/placeholder.jpg") no-repeat center / cover;
+                    }
+
+                    &_title {
+                        margin-bottom: 10px;
+                    }
+
+                    &_price {
+                        &-price {
+                            font-weight: 800;
+                            padding-right: 16px;
+                            margin-right: 14px;
+                            position: relative;
+
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 1px;
+                                height: 35px;
+                                background: rgba(#fff, .4);
+                            }
+                        }
+
+                        span:not(.top_price-price) {
+                            line-height: 1;
+                        }
+                    }
+                }
+
+                .main {
+                    &_list {
+                        text-align: left;
+                        padding: 40px 30px 30px 40px;
+
+                        &-item {
+                            margin-bottom: 15px;
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+
+                            &.exclude {
+                                opacity: 0.5;
+                            }
+
+                            .icon {
+                                margin-right: 20px;
+                                position: relative;
+                                top: 4px;
+                                color: $headerColor;
+                            }
+
+                            .text {
+                                font-weight: 400;
+                            }
+                        }
+                    }
+
+                    &_btn {
+                        width: calc(100% - 80px);
+                        margin: 0 40px;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 2px 14px rgba(137, 139, 255, 0.5);
+                }
+            }
+        }
+    }
+
+    &_text {
+        max-width: 730px;
+        position: relative;
+        padding-top: 30px;
+        margin: 40px auto 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #6A11CB 0.03%, #2575FC 96.48%);
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .pricing {
+        padding-bottom: 100px;
+
+        &_header {
+            margin: 0 auto 50px;
+
+            &-title {
+                margin-bottom: 10px;
+            }
+        }
+
+        &_nav {
+            margin: 0 auto 60px;
+        }
+
+        &_list {
+            margin: 0 -20px;
+
+            &-card {
+                padding: 0 20px;
+                max-width: unset;
+                margin-bottom: 40px;
+            }
+        }
+
+        &_text {
+            margin: 50px auto 0;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .pricing {
+        padding-bottom: 120px;
+
+        &_header {
+            &-title {
+                margin-bottom: 15px;
+            }
+        }
+
+        &_nav {
+            margin: 0 auto 140px;
+        }
+
+        &_list {
+            margin: 0 -12.5px;
+
+            &-card {
+                padding: 0 12.5px;
+                margin-bottom: 0;
+
+                &[data-order="2"] {
+                    margin-top: -50px;
+                }
+            }
+        }
+    }
+}

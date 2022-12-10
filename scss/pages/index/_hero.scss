@@ -1,0 +1,275 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// hero section
+
+main > .underlay {
+    background: url("../img/placeholder.jpg") no-repeat center / cover;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 0 20px;
+
+    &_media {
+        margin-top: 20px;
+
+        lottie-player {
+            left: 50%;
+            min-width: 400px;
+            position: relative;
+            transform: translateX(-50%);
+        }
+    }
+
+    &_content {
+        &-header {
+            margin-bottom: 30px;
+        }
+
+        &-rating {
+            margin-bottom: 15px;
+
+            .text {
+                margin-bottom: 10px;
+                color: $accent;
+            }
+        }
+
+        &-text {
+            margin-bottom: 40px;
+        }
+
+        &-action {
+            .btn {
+                width: 100%;
+
+                &:first-of-type {
+                    margin-bottom: 10px;
+                }
+
+                &--highlight {
+                    border: 1px solid $accentAlt;
+                    overflow: hidden;
+                    position: relative;
+
+                    .text {
+                        position: relative;
+                        z-index: 20;
+                        color: $accentAlt;
+                        font-size: 14px;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: linear-gradient(111.41deg, #FF0844 24.85%, #FF8B67 95.39%);
+                        transition: opacity .3s ease-in-out;
+                        opacity: 0;
+                        z-index: 1;
+                    }
+
+                    &:hover, &:focus {
+                        border-image: linear-gradient(111.41deg, #FF0844 24.85%, #FF8B67 95.39%);
+
+                        &:after {
+                            opacity: 1;
+                        }
+
+                        .text {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .hero {
+        text-align: left;
+        padding-bottom: 0;
+
+        &_media {
+            margin-top: 0;
+
+            lottie-player {
+                min-width: 600px;
+            }
+        }
+
+        &_content {
+            &-header {
+                max-width: 500px;
+                margin-bottom: 15px;
+            }
+
+            &-rating {
+                margin-bottom: 30px;
+
+                .text {
+                    margin-bottom: 0;
+                    line-height: 1;
+                    margin-right: 10px;
+                }
+            }
+
+            &-text {
+                margin-bottom: 35px;
+            }
+
+            &-action {
+                .btn {
+                    width: unset;
+                    max-width: unset;
+                    margin: 0;
+                    padding: 0;
+
+                    &:first-of-type {
+                        margin-bottom: 0;
+                        margin-right: 15px;
+                        width: 164px;
+                    }
+
+                    &--highlight {
+                        width: 194px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .hero {
+        padding-top: 100px;
+
+        &_media {
+
+            lottie-player {
+                min-width: 800px;
+            }
+        }
+
+        &_content {
+            &-text {
+                max-width: 450px;
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .hero {
+        position: relative;
+        padding: 200px 0 120px;
+
+        &_media {
+            width: 1390px;
+            height: 990px;
+            position: absolute;
+            right: -654px;
+            top: -150px;
+            z-index: -1;
+        }
+
+        &_content {
+            &-header {
+                margin-bottom: 30px;
+            }
+
+            &-rating {
+                margin-bottom: 20px;
+            }
+
+            &-text {
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .hero {
+        &_media {
+            right: -450px;
+        }
+    }
+}
+
+@media screen and (min-width: 1399.98px) {
+    .hero {
+        &_media {
+            right: -400px;
+        }
+
+        &_content {
+            width: 630px;
+        }
+    }
+}
+
+@media screen and (min-width: 1599.98px) {
+    .hero {
+        &_media {
+            right: -274px;
+        }
+    }
+}
+
+@media screen and (min-width: 1799.98px) {
+    .hero {
+        &_media {
+            right: -235px;
+        }
+    }
+}
+
+@media screen and (min-width: 1999.98px) {
+    .hero {
+        &_media {
+            right: -144px;
+        }
+    }
+}
+
+@media screen and (min-width: 2199.98px) {
+    .hero {
+        &_media {
+            right: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 2399.98px) {
+    .hero {
+        &_media {
+            right: 70px;
+        }
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .hero {
+        &_media {
+            right: 170px;
+        }
+    }
+}

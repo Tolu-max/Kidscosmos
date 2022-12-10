@@ -1,0 +1,173 @@
+/**
+ * Edison
+ * Edison is an Online Education Website Template Kit
+ * Exclusively on https://1.envato.market/edison-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilith (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// promo section
+
+.promo {
+    padding-bottom: 80px;
+
+    &_content {
+        margin-bottom: 40px;
+        text-align: center;
+
+        &-header {
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            margin-bottom: 30px;
+        }
+
+        &-btn {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .promo {
+        padding-bottom: 120px;
+
+        &_content {
+            margin-bottom: 50px;
+            text-align: left;
+
+            &-header {
+                max-width: 535px;
+                margin-bottom: 15px;
+            }
+
+            &-btn {
+                width: 164px;
+                max-width: unset;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .promo {
+        padding-bottom: 80px;
+
+        &_content {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .promo {
+        position: relative;
+        padding: 0;
+
+        &_content {
+            max-width: 535px;
+            margin: 0 0 0 auto;
+
+            &-header {
+                max-width: 535px;
+            }
+        }
+
+        &_media {
+            position: absolute;
+            overflow: visible;
+            top: -30px;
+            left: -320px;
+            width: 738px;
+        }
+    }
+}
+
+@media screen and (min-width: 1119.98px) {
+    .promo {
+        &_media {
+            top: -137px;
+            left: -402px;
+            width: 968px;
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .promo {
+        &_media {
+            top: -84px;
+            left: -442px;
+            width: 1095px;
+        }
+
+        &_content {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 1399.98px) {
+    .promo {
+        &_media {
+            left: -364px;
+        }
+    }
+}
+
+@media screen and (min-width: 1599.98px) {
+    .promo {
+        &_media {
+            width: 1200px;
+            left: -340px;
+            top: -112px;
+        }
+
+        &_content {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .promo {
+        &_media {
+            left: -180px;
+        }
+    }
+}
+
+@media screen and (min-width: 2200px) {
+    .promo {
+        &_media {
+            left: -60px;
+        }
+    }
+}
+
+@media screen and (min-width: 2400px) {
+    .promo {
+        &_media {
+            left: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .promo {
+        &_media {
+            left: 125px;
+        }
+    }
+}
